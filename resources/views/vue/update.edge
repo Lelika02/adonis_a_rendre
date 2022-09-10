@@ -1,0 +1,37 @@
+@layout('layout')
+
+@section('body')
+
+  <h2 class="titre">Modification d'un film</h2>
+
+  <div class="container largeur-form">
+
+    <form action="/postUpdate/{{film.id}}" method="post" enctype="multipart/form-data">
+      
+      <div class="mb-3">
+        <label class="form-label bold">Titre</label>
+        <input type="text" class="form-control" id="titre" name="titre" value="{{ film.titre }}">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label bold">Genre</label>
+        <input type="text" class="form-control" id="genre" name="genre" value="{{ film.genre }}">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label bold">Description</label>
+        <input type="text" class="form-control" id="description" name="description" value="{{ film.description }}">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label bold">Auteur</label>
+        <input type="text" class="form-control" id="auteur" name="auteur" value="{{ film.auteur }}">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Modifier</button>
+    
+    </form>
+
+  </div>
+
+@endsection
